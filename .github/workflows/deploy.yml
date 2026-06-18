@@ -21,7 +21,7 @@ jobs:
           protocol: ftps   # Si usas FTPS (recomendado). Si no, usa 'ftp'
           port: 21         # Puerto por defecto. Si usas 22 para SFTP, cambia a 22 y usa protocol: sftp
           local-dir: ./    # Ruta local a subir (desde la raíz del repo)
-          server-dir: /public_html/   # Ruta en el servidor. Ajusta si es necesario
+          server-dir: public_html/   # Ruta en el servidor. Ajusta si es necesario
           exclude: |
             .env
             .git*
