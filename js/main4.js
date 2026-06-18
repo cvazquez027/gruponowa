@@ -227,3 +227,44 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(section);
 });
+
+// ===== MODAL PERSONALIZADO =====
+function showModal(icon, title, message, isSuccess = true) {
+    const modal = document.getElementById('customModal');
+    const iconEl = document.getElementById('modalIcon');
+    const titleEl = document.getElementById('modalTitle');
+    const msgEl = document.getElementById('modalMessage');
+    const btn = document.getElementById('modalBtn');
+
+    iconEl.textContent = icon || (isSuccess ? '✅' : '❌');
+    titleEl.textContent = title || (isSuccess ? '¡Éxito!' : 'Error');
+    msgEl.textContent = message || (isSuccess ? 'Operación completada.' : 'Ocurrió un error.');
+
+    // Cambiar color del botón según éxito/error
+    btn.style.background = isSuccess ? 'var(--color-blue)' : '#c0392b';
+    btn.style.color = 'var(--color-white)';
+
+    modal.style.display = 'flex';
+
+    // Cerrar al hacer clic en el botón
+    btn.onclick = closeModal;
+
+    // Cerrar al hacer clic fuera del modal (en el backdrop)
+    const backdrop = modal.querySelector('.modal-backdrop');
+    backdrop.onclick = closeModal;
+
+    // Prevenir cierre accidental del contenedor
+    modal.querySelector('.modal-container').onclick = (e) => e.stopPropagation();
+}
+
+function closeModal() {
+    const modal = document.getElementById('customModal');
+    modal.style.display = 'none';
+}
+
+// Cerrar con tecla ESC
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+});

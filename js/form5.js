@@ -14,8 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // === Validar honeypot (campo oculto) ===
         const honeypot = document.getElementById('website').value;
         if (honeypot && honeypot.trim() !== '') {
-            console.warn('Honeypot activado: posible bot');
-            alert('Error al enviar. Intente nuevamente.');
+            showModal('⚠️', 'Error', 'Hubo un problema al enviar. Por favor, intentá nuevamente.', false);
             return;
         }
 
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const now = Date.now();
         const elapsed = (now - loadTime) / 1000;
         if (elapsed < 3) {
-            alert('Por favor, espere unos segundos antes de enviar.');
+            showModal('⏳', 'Por favor, esperá', 'Esperá unos segundos antes de enviar.', false);
             return;
         }
 
@@ -32,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const whatsapp = document.getElementById('whatsapp').value.trim();
         const rubro = document.getElementById('rubro').value;
         if (!nombre || !whatsapp || !rubro) {
-            alert('Por favor, completá todos los campos obligatorios (*).');
+            showModal('⚠️', 'Campos obligatorios', 'Por favor, completá todos los campos marcados con (*).', false);
             return;
         }
 
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('recaptcha_token').value = token;
         } catch (error) {
             console.error('Error al obtener reCAPTCHA:', error);
-            alert('Error de seguridad. Por favor, recargue la página e intente nuevamente.');
+            showModal('⚠️', 'Error de seguridad', 'Error de verificación. Recargá la página e intentá de nuevo.', false);
             return;
         }
 
@@ -67,16 +66,15 @@ document.addEventListener('DOMContentLoaded', function() {
             const result = await response.json();
 
             if (result.success) {
-                alert('¡Consulta enviada con éxito! Te responderemos a la brevedad.');
+                showModal('✅', '¡Enviado!', 'Tu consulta se envió correctamente. Te responderemos a la brevedad.');
                 form.reset();
-                // Resetear timestamp para evitar reenvíos rápidos
                 document.getElementById('timestamp').value = Date.now();
             } else {
-                alert('Error: ' + (result.message || 'Hubo un problema al enviar.'));
+                showModal('❌', 'Error', result.message || 'Hubo un problema al enviar.', false);
             }
         } catch (error) {
             console.error('Error de red:', error);
-            alert('Error de conexión. Por favor, intentá de nuevo.');
+            showModal('❌', 'Error de conexión', 'No pudimos conectar con el servidor. Por favor, intentá de nuevo.', false);
         } finally {
             btn.textContent = originalText;
             btn.disabled = false;

@@ -996,8 +996,18 @@ h3 {
 }
 
 .grecaptcha-badge {
-    left: 0 !important;
-    right: auto !important;
+    left: auto !important;
+    right: 12px !important;
+    bottom: 90px !important; /* Moverlo más arriba para no chocar con WhatsApp */
+    z-index: 100 !important;
+    opacity: 0.4;
+    transform: scale(0.75);
+    transform-origin: bottom right;
+    transition: opacity 0.3s ease;
+}
+
+.grecaptcha-badge:hover {
+    opacity: 1;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -1537,5 +1547,106 @@ h3 {
     }
     .areas-grid-lines {
         background-size: 40px 40px;
+    }
+}
+
+/* ===== MODAL PERSONALIZADO ===== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: modalFadeIn 0.3s ease;
+}
+
+.modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 31, 43, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-container {
+    position: relative;
+    background: var(--color-white);
+    border-radius: 16px;
+    padding: 40px 32px 32px;
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.3);
+    animation: modalScaleIn 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 1;
+}
+
+.modal-icon {
+    font-size: 3rem;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.modal-container h3 {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-extra);
+    color: var(--color-navy);
+    margin-bottom: 8px;
+}
+
+.modal-container p {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.modal-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--color-blue);
+    color: var(--color-white);
+    font-weight: var(--font-weight-bold);
+    transition: background 0.25s, transform 0.15s;
+}
+
+.modal-btn:hover {
+    background: #1f5a87;
+    transform: scale(1.02);
+}
+
+/* Animaciones */
+@keyframes modalFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes modalScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .modal-container {
+        padding: 28px 20px 24px;
+    }
+    .modal-container h3 {
+        font-size: 1.2rem;
+    }
+    .modal-container p {
+        font-size: 0.9rem;
     }
 }
