@@ -1,0 +1,29 @@
+:root {
+  /* Colores */
+  --color-navy: #0F1F2B;
+  --color-navy-light: #1A3A4A;
+  --color-blue: #2E6DA4;
+  --color-blue-light: #6BA3D6;
+  --color-gold: #C79A4A;
+  --color-cream: #F8F6F3;
+  --color-cream-dark: #F0EDE8;
+  --color-white: #FFFFFF;
+  --color-text: #0F1F2B;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #8A96A3;
+  --color-border: rgba(15,31,43,0.10);
+  --color-border-dark: rgba(15,31,43,0.20);
+
+  /* Tipografía */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-semi: 600;
+  --font-weight-bold: 700;
+  --font-weight-extra: 800;
+
+  /* Espaciado */
+  --container-max: 1140px;
+  --section-padding: 80px 0;
+  --gap-base: 24px;
+}

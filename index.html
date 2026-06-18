@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo NOWA — Conectamos fábricas del mundo con Latinoamérica</title>
+    <meta name="description" content="Importación de materiales, maquinaria y packaging. Condiciones de pago para importar sin descapitalizarte. Presencia en Argentina, Uruguay, Brasil y Estados Unidos.">
+    <meta name="keywords" content="importación, comercio internacional, materiales de construcción, maquinaria, packaging, Argentina, Uruguay, Brasil">
+    <meta property="og:title" content="Grupo NOWA — Conectamos fábricas del mundo con Latinoamérica">
+    <meta property="og:description" content="Tu socio estratégico en importación. Condiciones de pago y plan de abastecimiento a medida.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gruponowa.com.ar">
+    <meta property="og:image" content="https://gruponowa.com.ar/img/og-image.jpg">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg">
+
+    <!-- reCAPTCHA v3 -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LcNfiUtAAAAAPfVdC3SMeerDwZIqOju8Yta_X5t"></script>
+</head>
+<body>
+
+    <!-- ===== HEADER / NAV ===== -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="nav-inner">
+                <a href="#hero" class="logo" aria-label="Grupo NOWA">
+                    <img src="img/logo/logo_nowa.png" alt="Grupo NOWA" width="140" height="40">
+                </a>
+                <nav class="nav-links" aria-label="Navegación principal">
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#proceso">Cómo trabajamos</a></li>
+                        <li><a href="#areas">Rubros destacados</a></li>
+                        <li><a href="#diferenciales">Por qué elegirnos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+                <a href="#contacto" class="btn-primary nav-cta">Escribinos</a>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+        <!-- Menú móvil -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="#nosotros" onclick="toggleMenu()">Nosotros</a></li>
+                <li><a href="#proceso" onclick="toggleMenu()">Cómo trabajamos</a></li>
+                <li><a href="#areas" onclick="toggleMenu()">Rubros destacados</a></li>
+                <li><a href="#diferenciales" onclick="toggleMenu()">Por qué elegirnos</a></li>
+                <li><a href="#contacto" onclick="toggleMenu()">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="hero">
+        <!-- Slider de fondo -->
+        <div class="hero-slider">
+            <div class="slide" style="background-image: url('img/hero/bg_hero_1.jpg');"></div>
+            <div class="slide" style="background-image: url('img/hero/bg_hero_2.jpg');"></div>
+            <div class="slide" style="background-image: url('img/hero/bg_hero_3.jpg');"></div>
+        </div>
+
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <h1 id="heroTitle">Conectamos fábricas del mundo con Latinoamérica</h1>
+                <p class="hero-sub">Tu socio estratégico en importación de materiales, maquinaria, packaging y más.</p>
+                <p class="hero-highlight" id="typewriterText">
+                    <span id="typewriterContent"></span><span class="typewriter-cursor" id="typewriterCursor">|</span>
+                </p>
+                <div class="hero-ctas">
+                    <a href="#contacto" class="btn-primary">Escribinos →</a>
+                    <a href="#proceso" class="btn-secondary">Conocé cómo trabajamos</a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- ===== PRESENCE BAR ===== -->
+    <div class="presence-bar">
+        <div class="container">
+            <div class="presence-list">
+                <span class="presence-label">Presencia en</span>
+                <span class="presence-item">
+                    <img src="https://flagcdn.com/w40/ar.png" 
+                        srcset="https://flagcdn.com/w80/ar.png 2x"
+                        alt="Argentina" 
+                        width="20" 
+                        height="15" 
+                        loading="lazy">
+                    Argentina
+                </span>
+                <span class="presence-item">
+                    <img src="https://flagcdn.com/w40/uy.png" 
+                        srcset="https://flagcdn.com/w80/uy.png 2x"
+                        alt="Uruguay" 
+                        width="20" 
+                        height="15" 
+                        loading="lazy">
+                    Uruguay
+                </span>
+                <span class="presence-item">
+                    <img src="https://flagcdn.com/w40/br.png" 
+                        srcset="https://flagcdn.com/w80/br.png 2x"
+                        alt="Brasil" 
+                        width="20" 
+                        height="15" 
+                        loading="lazy">
+                    Brasil
+                </span>
+                <span class="presence-item">
+                    <img src="https://flagcdn.com/w40/us.png" 
+                        srcset="https://flagcdn.com/w80/us.png 2x"
+                        alt="Estados Unidos" 
+                        width="20" 
+                        height="15" 
+                        loading="lazy">
+                    Estados Unidos
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== NOSOTROS ===== -->
+    <section class="section nosotros" id="nosotros">
+        <div class="container">
+            <div class="section-grid reverse">
+                <div class="section-text">
+                    <span class="section-tag">Quiénes somos</span>
+                    <h2>NOWA en pocas palabras</h2>
+                    <p>Somos una empresa con años de experiencia que cuenta con base en Argentina y presencia permanente en Uruguay, Brasil y Estados Unidos. Nuestro objetivo es conectar fabricantes de todas partes del mundo con todos los mercados importantes de Latinoamérica.</p>
+                    <p>Trabajamos directamente con proveedores internacionales, lo que nos permite ofrecer precio competitivo con respaldo y servicio local. No somos un catálogo: <strong>somos el socio que se encarga de todo el proceso</strong>, desde la búsqueda del proveedor hasta la entrega en destino, confeccionando un preciso plan de abastecimiento internacional a medida de cada necesidad.</p>
+                    <p>Nuestro equipo tiene experiencia real en importación, logística internacional y operación aduanera en los cuatro países donde operamos. <strong>Si existe en el mundo, lo conseguimos.</strong></p>
+                </div>
+                <div class="section-image">
+                    <div class="slider-wrapper">
+                        <div class="slider-track">
+                            <div class="slide-item" style="background-image: url('img/equipo/img_equipo_1.jpeg');"></div>
+                            <div class="slide-item" style="background-image: url('img/equipo/img_equipo_2.jpeg');"></div>
+                            <div class="slide-item" style="background-image: url('img/equipo/img_equipo_3.jpeg');"></div>
+                            <div class="slide-item" style="background-image: url('img/equipo/img_equipo_4.jpeg');"></div>
+                            <div class="slide-item" style="background-image: url('img/equipo/img_equipo_5.jpeg');"></div>
+                        </div>
+                        <div class="slider-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROCESO ===== -->
+    <section class="section proceso" id="proceso">
+        <div class="container">
+            <span class="section-tag">Cómo trabajamos</span>
+            <h2>Cuatro pasos. Vos no hacés nada complicado.</h2>
+            <div class="steps-grid">
+                <!-- Paso 1 -->
+                <div class="step-card" data-step="1">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Nos contás qué necesitás</h3>
+                        <p>Producto, volumen, destino. Sin tecnicismos ni formularios interminables.</p>
+                    </div>
+                    <!-- Logo NOWA decorativo (solo hover) -->
+                    <svg class="nowa-logo-hover" width="80" height="80" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="0" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                        <rect x="58" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="0" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="58" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                    </svg>
+                </div>
+                <!-- Paso 2 -->
+                <div class="step-card" data-step="2">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Cotizamos con precio real</h3>
+                        <p>Precio final todo incluido, con alternativas concretas para que elijas y modalidades de pago para que importes sin descapitalizarte.</p>
+                    </div>
+                    <svg class="nowa-logo-hover" width="80" height="80" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="0" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                        <rect x="58" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="0" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="58" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                    </svg>
+                </div>
+                <!-- Paso 3 -->
+                <div class="step-card" data-step="3">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Coordinamos cada etapa</h3>
+                        <p>Producción, logística, documentación y entrega. Vos sabés en todo momento dónde está tu mercadería.</p>
+                    </div>
+                    <svg class="nowa-logo-hover" width="80" height="80" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="0" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                        <rect x="58" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="0" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="58" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                    </svg>
+                </div>
+                <!-- Paso 4 -->
+                <div class="step-card" data-step="4">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Tu mercadería llega</h3>
+                        <p>Con el producto, precio y plazo acordados. Sin sorpresas de último momento.</p>
+                    </div>
+                    <svg class="nowa-logo-hover" width="80" height="80" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <rect x="0" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                        <rect x="58" y="0" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="0" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.06)"/>
+                        <rect x="58" y="58" width="52" height="52" rx="7" fill="rgba(46,109,164,0.12)"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== RUBROS DESTACADOS (áreas de experiencia) ===== -->
+    <section class="section areas" id="areas">
+        <!-- Fondo decorativo -->
+        <div class="areas-bg">
+            <!-- Grilla sutil (se genera con CSS) -->
+            <div class="areas-grid-lines"></div>
+            <!-- Logo NOWA en grises -->
+            <svg class="areas-logo-bg" width="400" height="400" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="0" y="0" width="52" height="52" rx="7" fill="rgba(120,120,120,0.25)"/>
+                <rect x="58" y="0" width="52" height="52" rx="7" fill="rgba(120,120,120,0.15)"/>
+                <rect x="0" y="58" width="52" height="52" rx="7" fill="rgba(120,120,120,0.15)"/>
+                <rect x="58" y="58" width="52" height="52" rx="7" fill="rgba(120,120,120,0.25)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <span class="section-tag">Rubros destacados</span>
+            <h2>Catálogo en expansión</h2>
+        </div>
+
+        <!-- Slider dentro de container -->
+        <div class="container">
+            <div class="slider-container">
+                <div class="slider-track" id="sliderTrack">
+                    <div class="slider-slide" style="background-image: url('img/categorias/revestimientos.jpg');">
+                        <div class="slider-overlay">
+                            <h3>Revestimientos y pisos</h3>
+                            <p>SPC · Porcellanato · WPC · PVC · Zócalos</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide" style="background-image: url('img/categorias/sanitaria.jpg');">
+                        <div class="slider-overlay">
+                            <h3>Sanitaria y griferías</h3>
+                            <p>Bachas · Griferías · Inodoros · Flexibles</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide" style="background-image: url('img/categorias/acero.jpg');">
+                        <div class="slider-overlay">
+                            <h3>Acero e insumos de obra</h3>
+                            <p>Chapas · Mallas · TPO · Alambre · Clavos</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide" style="background-image: url('img/categorias/maquinaria.jpg');">
+                        <div class="slider-overlay">
+                            <h3>Maquinaria y equipamiento</h3>
+                            <p>Autoelevadores · Hidrogrúas · Palas cargadoras</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide" style="background-image: url('img/categorias/accesorios.jpg');">
+                        <div class="slider-overlay">
+                            <h3>Accesorios e instalación</h3>
+                            <p>Teflón · Herrajes · Complementos</p>
+                        </div>
+                    </div>
+                    <div class="slider-slide" style="background-image: url('img/categorias/packaging.jpg');">
+                        <div class="slider-overlay">
+                            <h3>Packaging y consumibles</h3>
+                            <p>Vacío · Bambú · Packaging industrial</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controles -->
+                <button class="slider-btn prev" id="prevBtn" aria-label="Anterior">‹</button>
+                <button class="slider-btn next" id="nextBtn" aria-label="Siguiente">›</button>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+
+        <!-- Tarjeta destacada -->
+        <div class="container">
+            <div class="area-card card-highlight">
+                <div class="highlight-content">
+                    <h3>¿Tu producto no está en la lista?</h3>
+                    <p>Trabajamos cualquier categoría. Si existe en el mundo, lo conseguimos. Cotizamos sin plazo fijo.</p>
+                    <a href="#contacto" class="btn-outline">Consultar sourcing a medida</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== POR QUÉ NOWA ===== -->
+    <section class="section diferenciales" id="diferenciales">
+        <div class="diferenciales-bg"></div>
+
+        <div class="container">
+            <span class="section-tag">Por qué NOWA</span>
+            <h2>Cinco razones para trabajar con nosotros</h2>
+        </div>
+
+        <div class="circle-container">
+            <svg class="circle-line-svg" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="300" cy="300" r="200" fill="none" stroke="rgba(46,109,164,0.08)" stroke-width="2"/>
+                <circle class="circle-path" cx="300" cy="300" r="200" fill="none" stroke="#2E6DA4" stroke-width="3"
+                        stroke-dasharray="1256" stroke-dashoffset="1256"
+                        stroke-linecap="round"/>
+            </svg>
+
+            <div class="circle-item" data-index="0" style="--angle: -90deg;">
+                <div class="circle-card">
+                    <span class="circle-number">01</span>
+                    <h3>Conexión directa con fábricas del mundo</h3>
+                    <p>Sin revendedores en el medio. El precio que pagás refleja el costo real de origen.</p>
+                </div>
+            </div>
+
+            <div class="circle-item" data-index="1" style="--angle: -18deg;">
+                <div class="circle-card">
+                    <span class="circle-number">02</span>
+                    <h3>Precio final todo incluido</h3>
+                    <p>Un solo número antes de confirmar. Sin sorpresas ni costos que aparecen después.</p>
+                </div>
+            </div>
+
+            <div class="circle-item" data-index="2" style="--angle: 54deg;">
+                <div class="circle-card">
+                    <span class="circle-number">03</span>
+                    <h3>Plan de abastecimiento a medida</h3>
+                    <p>Importación ordenada y predecible, con condiciones para crecer sin descapitalizarte.</p>
+                </div>
+            </div>
+
+            <div class="circle-item" data-index="3" style="--angle: 126deg;">
+                <div class="circle-card">
+                    <span class="circle-number">04</span>
+                    <h3>Optimización real del envío</h3>
+                    <p>Cada m³ del contenedor es analizado. Sin espacio vacío, sin costo innecesario por unidad.</p>
+                </div>
+            </div>
+
+            <div class="circle-item" data-index="4" style="--angle: 198deg;">
+                <div class="circle-card">
+                    <span class="circle-number">05</span>
+                    <h3>Interlocutor local en 4 países</h3>
+                    <p>Presencia real en Argentina, Uruguay, Brasil y Estados Unidos. Alguien que atiende y resuelve en tiempo real.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACTO ===== -->
+    <section class="section contacto" id="contacto">
+        <!-- Fondo decorativo (igual que en Áreas) -->
+        <div class="contacto-bg">
+            <div class="contacto-grid-lines"></div>
+            <svg class="contacto-logo-bg" width="400" height="400" viewBox="0 0 110 110" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="0" y="0" width="52" height="52" rx="7" fill="rgba(120,120,120,0.25)"/>
+                <rect x="58" y="0" width="52" height="52" rx="7" fill="rgba(120,120,120,0.15)"/>
+                <rect x="0" y="58" width="52" height="52" rx="7" fill="rgba(120,120,120,0.15)"/>
+                <rect x="58" y="58" width="52" height="52" rx="7" fill="rgba(120,120,120,0.25)"/>
+            </svg>
+        </div>
+
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <span class="section-tag light">Contacto</span>
+                    <h2 id="contactTitle">¿Qué necesitás importar?</h2>
+                    <p>Contanos tu necesidad y un asesor de NOWA te responde a la brevedad.</p>
+                    <p class="contact-sub">Somos socios ideales para:</p>
+                    <ul class="contact-reasons">
+                        <li>Distribuidores que buscan conexión directa con el mercado internacional</li>
+                        <li>Constructoras y desarrolladores que necesitan volumen con precio estable</li>
+                        <li>Pymes que quieren importar su propio producto sin navegarlo solos</li>
+                        <li>Industrias que necesitan maquinaria o insumos a precio de fábrica</li>
+                        <li>Empresas de packaging y gastronomía con necesidades específicas</li>
+                    </ul>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="nombre">Nombre / Empresa *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre o razón social">
+                        </div>
+                        <div class="form-group">
+                            <label for="whatsapp">WhatsApp *</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required placeholder="+54 9 11 0000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="mail@empresa.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="rubro">Rubro de la empresa *</label>
+                            <select id="rubro" name="rubro" required>
+                                <option value="">Seleccioná...</option>
+                                <option value="construccion">Construcción / Materiales</option>
+                                <option value="maquinaria">Maquinaria y equipamiento</option>
+                                <option value="packaging">Packaging y consumibles</option>
+                                <option value="sanitaria">Sanitaria y grifería</option>
+                                <option value="revestimientos">Revestimientos y pisos</option>
+                                <option value="decoracion">Decoración y terminaciones</option>
+                                <option value="acero">Acero e insumos</option>
+                                <option value="gastronomia">Gastronomía / Alimentos</option>
+                                <option value="otro">Otro rubro (especificar en mensaje)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje (opcional)</label>
+                            <textarea id="mensaje" name="mensaje" rows="3" placeholder="Contanos más sobre lo que necesitás..."></textarea>
+                        </div>
+                        <!-- Anti-bot: honeypot (oculto) -->
+                        <input type="text" name="website" id="website" style="display:none !important;" tabindex="-1" autocomplete="off">
+                        <!-- Timestamp de carga -->
+                        <input type="hidden" name="timestamp" id="timestamp" value="">
+                        <!-- Token de reCAPTCHA (se llenará con JS) -->
+                        <input type="hidden" name="recaptcha_token" id="recaptcha_token" value="">
+                        <button type="submit" class="btn-primary btn-full">Enviar consulta</button>
+                        <p class="form-note">O escribinos directo por WhatsApp al <a href="https://wa.me/5491122894924" target="_blank">+54 9 11 2289-4924</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="img/logo/logo_nowa_w.png" alt="Grupo NOWA" width="140" height="40">
+                    <p>Conectamos fábricas del mundo con el mercado latinoamericano, con las mejores condiciones de pago para importar sin descapitalizarte.</p></br>
+                    <p>Presencia en:</p>
+                    <div class="presence-list-footer">
+                        <span class="presence-item">
+                            <img src="https://flagcdn.com/w40/ar.png" 
+                                srcset="https://flagcdn.com/w80/ar.png 2x"
+                                alt="Argentina" 
+                                width="20" 
+                                height="15" 
+                                loading="lazy">
+                            Argentina
+                        </span>
+                        <span class="presence-item">
+                            <img src="https://flagcdn.com/w40/uy.png" 
+                                srcset="https://flagcdn.com/w80/uy.png 2x"
+                                alt="Uruguay" 
+                                width="20" 
+                                height="15" 
+                                loading="lazy">
+                            Uruguay
+                        </span>
+                        <span class="presence-item">
+                            <img src="https://flagcdn.com/w40/br.png" 
+                                srcset="https://flagcdn.com/w80/br.png 2x"
+                                alt="Brasil" 
+                                width="20" 
+                                height="15" 
+                                loading="lazy">
+                            Brasil
+                        </span>
+                        <span class="presence-item">
+                            <img src="https://flagcdn.com/w40/us.png" 
+                                srcset="https://flagcdn.com/w80/us.png 2x"
+                                alt="Estados Unidos" 
+                                width="20" 
+                                height="15" 
+                                loading="lazy">
+                            Estados Unidos
+                        </span>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explorar</h4>
+                    <ul>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                        <li><a href="#proceso">Cómo trabajamos</a></li>
+                        <li><a href="#areas">Rubros destacados</a></li>
+                        <li><a href="#diferenciales">Por qué elegirnos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><a href="mailto:contacto@gruponowa.com.ar">contacto@gruponowa.com.ar</a></li>
+                        <li><a href="https://wa.me/5491122894924" target="_blank">+54 9 11 2289-4924</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Grupo NOWA. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a href="https://wa.me/5491122894924" target="_blank" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white" width="28" height="28">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="js/form.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
