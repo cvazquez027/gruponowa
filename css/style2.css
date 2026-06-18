@@ -995,6 +995,11 @@ h3 {
   transform: scale(1.08);
 }
 
+.grecaptcha-badge {
+    left: 0 !important;
+    right: auto !important;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero-inner {
