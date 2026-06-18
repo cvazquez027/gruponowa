@@ -1,0 +1,33 @@
+name: Deploy to Hostinger via FTP
+
+on:
+  push:
+    branches:
+      - main      # Cambia a 'master' si usas esa rama
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps   # Si usas FTPS (recomendado). Si no, usa 'ftp'
+          port: 21         # Puerto por defecto. Si usas 22 para SFTP, cambia a 22 y usa protocol: sftp
+          local-dir: ./    # Ruta local a subir (desde la raíz del repo)
+          server-dir: /public_html/   # Ruta en el servidor. Ajusta si es necesario
+          exclude: |
+            .env
+            .git*
+            .github*
+            composer.lock
+            vendor/
+            node_modules/
+            *.log
+          dry-run: false
